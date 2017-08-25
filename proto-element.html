@@ -1,0 +1,41 @@
+<link rel="import" href="bower_components/polymer/polymer.html">
+<link rel="import" href="bower_components/iron-input/iron-input.html">
+
+<dom-module id="proto-element">
+
+<template>
+  <style>
+    div {
+      display: inline-block;
+      background-color: #ccc;
+      border-radius: 8px;
+      padding: 4px;
+    }
+
+  </style>
+
+  <div>
+    <content></content>
+  </div>
+
+<p>This proto-element was created by <strong>[[name]]</strong>.</p>
+
+<input is="iron-input" bind-value={{name}} placeholder="Type in your name...">
+
+</template>
+
+
+  <script>
+    Polymer({
+
+      is: 'proto-element',
+
+    properties:{
+      name:{
+        type: String,
+        value:""
+      }
+    }
+    });
+  </script>
+</dom-module>
